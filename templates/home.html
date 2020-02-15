@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <div>Welcome to Drug Catalog</div>
+        <form action='/' method='post'>
+            <input placeholder="Name" name='name'>
+            <input placeholder="IUPAC Name" name='iupac_name'>
+            <input placeholder="canonical SMILES" name='canonical_smiles'>
+            <input placeholder="Molecular Formula" name='molecular_formula'>
+            <input placeholder="CAS Number" name='cas_number'>
+            <input placeholder="Molecular Weight" name='molecular_weight'>
+            <input placeholder="Class" name='class'>
+            <input placeholder="Superclass" name='superclass'>
+            <input placeholder="Rotable Bond" name='rotable_bond_count'>
+            <input placeholder="complexity" name='complexity'>
+            <input type="submit" value="Submit"
+        </form>
+
+        {% for drug in drugs %}
+        <div>Name: {{ drug[1] }}</div>
+        {% endfor %}
+
+    </body>
+</html>
