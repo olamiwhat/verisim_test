@@ -17,3 +17,4 @@ def getDrugs():
     cur.execute('select * from drugs')
     drugs = cur.fetchall()
     return drugs
+    
