@@ -10,11 +10,10 @@
  - post functionality was defined
  - read functionality was defined
  
- ## To Do
+ ## Still To Do
  - Edit functionality
  - update functionality
 
 
  ## stretch
-  - Revisit database schema. I know some of the drug attributes will exhibit a one to many relationship, so table will need to be normalized
-  -
+  - Revisit database schema. I know some of the drug attributes will exhibit a one to many relationship, so table will need to be normalized.
