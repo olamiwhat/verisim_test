@@ -1,6 +1,7 @@
 ## Tools
- - python
+ -python
  -sqlite3
+ -flask
 
 ## Done
  - Application was created in a virtual env (verisim)
