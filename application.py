@@ -32,7 +32,7 @@ def home():
 
     return render_template('home.html', drugs=drugs)
 
-# still working on
+# still working on - complete later
 @app.route('/<drug_name>/edit', methods=['GET', 'POST'])
 def editDrug(drug_name):
     
@@ -43,7 +43,7 @@ def editDrug(drug_name):
         return render_template('edit_drug.html')
 
 
-#still working on
+#still working on - complete later
 @app.route('/<drug_name>/delete', methods=['GET', 'POST'])
 def deleteDrug(drug_name):
     
