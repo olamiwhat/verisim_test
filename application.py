@@ -28,13 +28,16 @@ def home():
 
         saveData(name, iupac_name, canonical_smiles, molecular_formula, cas_number,  molecular_weight, drug_class, superclass, rotable_bond_count, complexity)
 
+        return redirect(url_for('home'))
+
     drugs = getDrugs()
 
     return render_template('home.html', drugs=drugs)
 
+
 # still working on - complete later
 @app.route('/<drug_name>/edit', methods=['GET', 'POST'])
-def editDrug(drug_name):
+def edit(drug_name):
     
     if request.method == 'POST':
         return redirect(url_for('home'))
@@ -45,7 +48,7 @@ def editDrug(drug_name):
 
 #still working on - complete later
 @app.route('/<drug_name>/delete', methods=['GET', 'POST'])
-def deleteDrug(drug_name):
+def delete(drug_name):
     
     if request.method == 'POST':
         return redirect(url_for('home'))

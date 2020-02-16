@@ -20,9 +20,9 @@
         {% for drug in drugs %}
         <div>
             <h2>{{ drug[1] }}</h2>
-            <span><a href="{{ url_for('editDrug', drug_name=drug_name) }}">Edit Drug</a></span>
+            <span><a href="{{ url_for('edit', drug_name=drug_name) }}">Edit Drug</a></span>
             <span>&#124;</span>
-            <span><a href="{{ url_for('deleteDrug', drug_name=drug_name) }}">Delete Drug</a></span>
+            <span><a href="{{ url_for('delete', drug_name=drug_name) }}">Delete Drug</a></span>
             {% for attribute in drug %}
             <p>{{ attribute }}</p>
             {% endfor %} 
