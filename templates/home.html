@@ -17,7 +17,12 @@
         </form>
 
         {% for drug in drugs %}
-        <div>Name: {{ drug[1] }}</div>
+        <div>
+            <h2>{{ drug[1] }}</h2>
+            {% for attribute in drug %}
+            <p>{{ attribute }}</p>
+            {% endfor %}
+        </div>
         {% endfor %}
 
     </body>
