@@ -1,3 +1,6 @@
+## install dependencies
+`pip install -r requirements.txt`
+
 ## Tools
  -python
  -sqlite3
