@@ -12,7 +12,7 @@
  - read functionality was defined
  
  ## Still To Do
- - Edit functionality
+ - Delete functionality
  - update functionality
 
 
