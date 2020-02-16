@@ -2,6 +2,7 @@
 <html>
     <body>
         <div>Welcome to Drug Catalog</div>
+        <h2>Add a new drug below:</h2>
         <form action='/' method='post'>
             <input placeholder="Name" name='name'>
             <input placeholder="IUPAC Name" name='iupac_name'>
@@ -19,9 +20,12 @@
         {% for drug in drugs %}
         <div>
             <h2>{{ drug[1] }}</h2>
+            <span><a href="{{ url_for('editDrug', drug_name=drug_name) }}">Edit Drug</a></span>
+            <span>&#124;</span>
+            <span><a href="{{ url_for('deleteDrug', drug_name=drug_name) }}">Delete Drug</a></span>
             {% for attribute in drug %}
             <p>{{ attribute }}</p>
-            {% endfor %}
+            {% endfor %} 
         </div>
         {% endfor %}
 

@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request
+from flask import Flask, render_template, request, redirect, url_for
 from flask_cors import CORS
 from models import saveData, getDrugs
 
@@ -31,6 +31,28 @@ def home():
     drugs = getDrugs()
 
     return render_template('home.html', drugs=drugs)
+
+
+@app.route('/<drug_name>/edit', methods=['GET', 'POST'])
+def editDrug(drug_name):
+    
+    if request.method == 'POST':
+        return redirect(url_for('home'))
+        
+    else:
+        return render_template('edit_drug.html')
+
+
+
+@app.route('/<drug_name>/delete', methods=['GET', 'POST'])
+def deleteDrug(drug_name):
+    
+    if request.method == 'POST':
+        return redirect(url_for('home'))
+        
+    else:
+        return render_template('delete_drug.html')
+
 
 if __name__ == '__main__':
     app.run(debug=True)
